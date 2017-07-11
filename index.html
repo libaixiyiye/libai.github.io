@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Libai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="这是李白的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Libai">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Libai">
+<meta property="og:description" content="这是李白的博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Libai">
+<meta name="twitter:description" content="这是李白的博客">
+  
+    <link rel="alternate" href="/atom.xml" title="Libai" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Libai</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">欢迎来到李白的博客</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-react" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/12/react/" class="article-date">
+  <time datetime="2017-07-11T16:13:52.172Z" itemprop="datePublished">2017-07-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/12/react/">React</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>React一个用于构建用户界面的JavaScript库</p>
+<p>##安装bower<br>bower 前端框架器 jQuery angular bootstrap<br>bower 是一个全局的命令行工具，需要通过npm 全局安装</p>
+<blockquote>
+<p>npm 是安装node的时候自动安装<br>npm node包管理器</p>
+</blockquote>
+<p>##安装react<br>$ bower install react babel –save</p>
+<blockquote>
+<p>react是需要安装的模块，babel相当于翻译，因为浏览器不能识别react代码，所以通过babel帮助翻译，把react原生代码翻译可识别的JS代码</p>
+<p>bower install 之后会在当前项目下增加一个bower_components的文件夹，里面放着安装的模块</p>
+</blockquote>
+<p><code>react.js</code>是React的核心库<br><code>react-dom.js</code>是提供与DOM相关的功能，会在window下增加ReactDOM属性<br><code>brower.js</code>的作用是将<code>JSX</code>语法转为JavaScript语法<br><code>script</code>的<code>type</code>属性为<code>text/babel</code>,因为React独有的JSX语法，跟JavaScript不兼容</p>
+<p>要把<code>bower_component</code>添加到git的忽略列表里面,只需要把依赖的模块告诉别人就可以，别人可以自行安装，还有就是包太大。</p>
+<p>##ReactDOM.render()</p>
+<p>引入react-dom.js之后会在window下增加一个ReactDOM属性，也就是说会增加这样一个全局变量</p>
+<blockquote>
+<p>参数1 是要渲染的内容 也就是要插入到DOM元素内部的标签,<strong>有且只能有一个顶级元素</strong><br>参数2 画布 ，要渲染到那个DOM元素的内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ReactDOM.render(</div><div class="line">	&lt;h1&gt;JSZ&lt;/h1&gt;,</div><div class="line">	document.getElementById(&apos;app&apos;)</div><div class="line">)</div></pre></td></tr></table></figure></p>
+<p>如果想在htmldiamante里面内部写JS代码，那么需要套一对大括号，{ } 里面代表的代表是JS代码，一般会经过运行会返回一个东西，会被渲染出来。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var arr=[&apos;张三&apos;，&apos;李四&apos;，&apos;王五&apos;]</div><div class="line">ReactDOM.render(</div><div class="line">	&lt;div&gt;&#123;</div><div class="line">		arr.map(function(item,index,input)&#123;</div><div class="line">			return &lt;div key=&#123;index&#125;&gt;&#123;item&#125;&lt;/div&gt;</div><div class="line">		&#125;)</div><div class="line">	&#125;&lt;/div&gt;,</div><div class="line">	document.getElementById(&apos;app&apos;)</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>##createClass<br>通过<code>createClass</code>可以创建一个自定义组件,这个自动以组件用法和普通的HTML标签一样用，组件名首字母必须大写，必须有结束标签，<br><strong>属性</strong>一般是有父组件使用此子组件的时候传入的<br><strong>this</strong>代表当前组件的实例</p>
+<p>##优点</p>
+<ul>
+<li>方便引用，精简代码</li>
+<li>方便修改，如果要修改只要改一处就可以<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var Message=React.createClass(&#123;</div><div class="line">//render有一个返回值，表示此组件将被如何渲染</div><div class="line">	render()&#123;</div><div class="line">		return &lt;div&gt;你好再见&lt;div&gt;</div><div class="line">	&#125;</div><div class="line">&#125;);</div><div class="line">//只有当调用render的时候才会真正创建一个组件的实例</div><div class="line">ReactDOM.render(</div><div class="line">	&lt;Message/&gt;,</div><div class="line">	document.getElementById(&apos;app&apos;)</div><div class="line">)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>getInitialState</code>获取初始状态, 返回一个状态对象，这个状态对象的属性和值自己决定<br>this.state 获取返回值</p>
+<p>##react元素<br>React 当中的元素事实上是普通的对象，所以元素属性不能随便写。React DOM 可以确保 浏览器 DOM 的数据内容与 React 元素保持一致。</p>
+<p>渲染有差异的，有变化的。</p>
+<p>##属性/状态</p>
+<ul>
+<li>属性具有不变性<br>属性是由外部传入的，而且不会改变</li>
+<li>状态<br>是由内部初始化，并且随着时间的推移，随着外界的影响会发生变化</li>
+</ul>
+<p>##迭代元素数组需要唯一的key值用索引</p>
+<blockquote>
+<p>如果花括号中是一个数组，会自动迭代</p>
+</blockquote>
+<p>##this.props.children<br>一个的时候是对象，多个的时候是数组</p>
+<p>##React.Children.map<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">无论一个还是多个用这个方法都可以迭代</div><div class="line">React.Children.map(this.props.children,(item,index)=&gt;&lt;li key=&#123;index&#125;&gt;&#123;item&#125;&lt;/li&gt;)</div></pre></td></tr></table></figure></p>
+<p>##如何在react元素中获取真实DOM元素<br>给他起个名字<code>ref=a</code><br>this.refs是一个对象，属性就是虚拟DOM的ref的值 ，值是此虚拟DOM渲染完成之后的真实DOM对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//this.refs.b.value;</div><div class="line">&lt;input ref=&quot;a&quot; type=&quot;text&quot; defaultValue=&#123;0&#125;/&gt;</div><div class="line">//this.a.value;</div><div class="line">&lt;input ref=&#123;ref=&gt;this.a=ref&#125; type=&quot;text&quot; defaultValue=&#123;0&#125; onChange=&#123;this.change&#125;/&gt;</div></pre></td></tr></table></figure></p>
+<p>this.refs是一个对象，属性就是虚拟Dom的ref的属性，</p>
+<p>##事件<br>事件监听函数里的this默认执行null ，所有可以使用箭头函数，或者使用bind。推荐箭头函数</p>
+<p>##设置组件的属性类型和是否必须提供<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Person.propTypes = &#123;</div><div class="line">    name:PropTypes.string.isRequired</div><div class="line">&#125;</div><div class="line">Person.defaultProps = &#123;</div><div class="line">    name:&apos;你好&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>##React.Children.map是React提供的工具方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">React.Children.map(this.props.children,(item,index)=&gt;&lt;li key=&#123;index&#125;&gt;&#123;item&#125;&lt;/li&gt;)</div></pre></td></tr></table></figure></p>
+<p>##模拟双向绑定<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">class App extends Component&#123;</div><div class="line">    constructor(props)&#123;</div><div class="line">        super(props);</div><div class="line">        this.state=&#123;number:0&#125;</div><div class="line">    &#125;</div><div class="line">    handleClick=(e)=&gt;&#123;</div><div class="line">        this.setState(&#123;number:e.target.value&#125;);</div><div class="line">    &#125;;</div><div class="line">    render()&#123;</div><div class="line">        return(</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;input type=&quot;text&quot; onChange=&#123;this.handleClick&#125;/&gt;</div><div class="line">                &lt;p&gt;&#123;this.state.number&#125;&lt;/p&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>##static propTypes<br>需要父组件传来的属性</p>
+<p>##static defaultProps<br>默认的props</p>
+<p>##updata<br>不能更改状态，会重新render，进入死循环</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/12/react/" data-id="cj4zse6xf0000qcahvg8xjr8d" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/12/react/">React</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Libai<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
